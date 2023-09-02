@@ -30,7 +30,7 @@ resource "aws_iam_role" "capstone_eks_nodes_role" {
    name = "capstone_project3_eks_nodes"
    assume_role_policy = <<POLICY
     {
-	"Version":"2021-10-17",
+	"Version":"2012-10-17",
         "Statement": [
 	  {
 	    "Effect":"Allow",
