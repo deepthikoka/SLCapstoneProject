@@ -28,7 +28,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSServicePolicy" {
 
 resource "aws_iam_role" "capstone_eks_nodes_role" {
    name = "capstone_project3_eks_nodes"
-   asssume_role_policy = <<POLICY
+   assume_role_policy = <<POLICY
     {
 	"Version":"2021-10-17",
         "Statement": [
