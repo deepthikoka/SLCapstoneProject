@@ -16,7 +16,7 @@ resource "aws_eks_cluster" "capstone_eks_cluster" {
 resource "aws_eks_node_group" "capstone_eks_node_group" {
     cluster_name = aws_eks_cluster.capstone_eks_cluster.name
     node_group_name = "capstone_node_group"
-    node_role_arn = aws_iam_role.capstone_eks_cluster_role.arm
+    node_role_arn = aws_iam_role.capstone_eks_cluster_role.arn
     subnet_ids = [aws_subnet.capstone_subnet_a.id,aws_subnet.capstone_subnet_b.id,aws_subnet.capstone_subnet_c.id]
     scaling_config {
       desired_size = 1
