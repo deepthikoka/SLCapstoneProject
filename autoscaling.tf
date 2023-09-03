@@ -3,14 +3,13 @@ resource "aws_launch_template" "capstone_template" {
   image_id = "ami-005f9685cb30f234b"
   instance_type = "t2.micro"
   network_interfaces {
-     associate_public_ip_address = true
      security_groups = [aws_security_group.capstone_sg.id]
  }
 }
 
 resource "aws_autoscaling_group" "capstone_asg" {
   name = "capstone_project3_asg"
-  max_size = 3
+  max_size = 2
   min_size = 1
   health_check_type = "EC2"
   desired_capacity = 1
