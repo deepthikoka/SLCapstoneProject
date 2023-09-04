@@ -22,7 +22,7 @@ resource "aws_autoscaling_group" "capstone_asg" {
 resource "aws_autoscaling_policy" "capstone_autoscaling_policy" {
   name = "capstone_project3_autoscaling_policy"
   policy_type = "TargetTrackingScaling"
-  autoscaling_group_name = aws_autoscaling_group.capstone_asg.name"
+  autoscaling_group_name = aws_autoscaling_group.capstone_asg.name
   estimated_instance_warmup = 200
   target_tracking_configuration {
      predefined_metric_specification {
